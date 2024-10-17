@@ -1,0 +1,58 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-error {
+  color: red; /* Change color as needed */
+}
+
+.centered-heading {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2.5rem; /* You can adjust the size as needed */
+}
+
+.form-card {
+  width: 400px; /* Set a width for the form container */
+  padding: 20px; /* Add some padding for spacing */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better look */
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Full viewport height to ensure perfect vertical centering */
+  width: 100vw; /* Full viewport width to ensure perfect horizontal centering */
+}
+
+/* sweet-button.component.css */
+.sweet-button {
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 0 0 12px 12px;
+  padding: 10px 24px;
+  background-color: #424280; /* A sweet pink color */
+  color: rgb(222, 13, 13);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sweet-button:hover {
+  background-color: #615959; /* Slightly darker pink on hover */
+  color: black;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox-container {
+  background-color: #d8d4dc;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items */
+  gap: 16px; /* Space between checkboxes */
+}
+
+mat-checkbox {
+  flex: 0 1 calc(50% - 16px); /* Each checkbox takes up about half the width minus the gap */
+}

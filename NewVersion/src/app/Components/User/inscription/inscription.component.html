@@ -1,0 +1,95 @@
+<h1 mat-typography class="centered-heading">Inscripció proves atletisme</h1>
+<section class="centered-container">
+  <mat-card class="form-card">
+    <mat-form-field appearance="fill">
+      <mat-label>DNI</mat-label>
+      <input
+        matInput
+        placeholder="Example : 12345678"
+        [(ngModel)]="this.user.dni"
+        required
+      />
+      {{ this.findLetter() }}
+
+      <mat-error>
+        <ng-container>{{ this.dniValid() }} </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Codi Federat</mat-label>
+      <input
+        matInput
+        placeholder="Example : 1234"
+        [(ngModel)]="this.user.codiFederat"
+        required
+      />
+
+      <mat-error>
+        <ng-container>{{ this.CodiFederatValid() }} </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        placeholder="Example : username1"
+        [(ngModel)]="this.user.username"
+        required
+      />
+
+      <mat-error>
+        <ng-container>{{ this.UsernameValid() }} </ng-container>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Example : StrongPasssword123"
+        [(ngModel)]="this.user.password"
+        required
+      />
+
+      <mat-error>
+        <ng-container>{{ this.PasswordValid() }} </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm Password</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Example : StrongPasssword123"
+        [(ngModel)]="this.repassword"
+        required
+      />
+
+      <mat-error>
+        <ng-container>{{ this.confirmPass() }} </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <div class="checkbox-container">
+      <mat-checkbox
+        *ngFor="let option of options; let i = index"
+        [checked]="isSelected(option.name)"
+        (change)="onCheckboxChange(option, $event)"
+      >
+        {{ option.name }}
+      </mat-checkbox>
+    </div>
+
+    <button
+      (click)="this.onSubmit()"
+      mat-raised-button
+      color="primary"
+      class="sweet-button"
+    >
+      Subscribe
+    </button>
+  </mat-card>
+</section>
